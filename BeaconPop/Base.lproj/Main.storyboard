@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeaconPop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XLk-VQ-9dX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Pop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxk-fc-SHS">
+                                <rect key="frame" x="230" y="28" width="141" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="cks-5j-ZyA"/>
+                                    <constraint firstAttribute="height" constant="63" id="reX-xa-Ylc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="34"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iBeacon Broadcaster" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRw-T8-Nim">
+                                <rect key="frame" x="206" y="99" width="189" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="aUI-bV-yMl"/>
+                                    <constraint firstAttribute="width" constant="189" id="lh1-VL-0a6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDp-2o-93O">
+                                <rect key="frame" x="260" y="260" width="80" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="DUz-JG-b3T"/>
+                                    <constraint firstAttribute="height" constant="80" id="z2e-vd-V2q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchBroadcastingState:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ImO-Xn-vuC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bluetooth Status: Unknown" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2B7-fO-cuQ">
+                                <rect key="frame" x="16" y="559" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="J1c-mQ-atd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="15"/>
+                                <color key="textColor" red="0.49803921579999999" green="0.54901963470000004" blue="0.55294120309999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zj8-Fz-pYd">
+                                <rect key="frame" x="100" y="149" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="ZnC-97-MYQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Msm-9Y-Yn0">
+                                <rect key="frame" x="423" y="149" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Lgb-Tb-0ng"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7St-8O-W9s">
+                                <rect key="frame" x="100" y="187" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2lQ-Z8-WSO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" red="0.17254902420000001" green="0.24313725529999999" blue="0.31372550129999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9W-hg-uob">
+                                <rect key="frame" x="423" y="186" width="80" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" red="0.17254902420000001" green="0.24313725529999999" blue="0.31372550129999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stopped" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BD5-1j-MfZ">
+                                <rect key="frame" x="16" y="348" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Cio-UH-y4l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="15"/>
+                                <color key="textColor" red="0.2039215714" green="0.28627452250000002" blue="0.36862745879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BD5-1j-MfZ" firstAttribute="trailing" secondItem="2B7-fO-cuQ" secondAttribute="trailing" id="3sd-wb-7Yc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Msm-9Y-Yn0" secondAttribute="trailing" constant="81" id="4Eg-JH-EMX"/>
+                            <constraint firstItem="zj8-Fz-pYd" firstAttribute="leading" secondItem="XLk-VQ-9dX" secondAttribute="leadingMargin" constant="84" id="CFt-9q-TtV"/>
+                            <constraint firstAttribute="centerX" secondItem="Dxk-fc-SHS" secondAttribute="centerX" id="E7y-z7-Uij"/>
+                            <constraint firstItem="I9W-hg-uob" firstAttribute="top" secondItem="Msm-9Y-Yn0" secondAttribute="bottom" constant="7" id="Gpu-Xe-4d1"/>
+                            <constraint firstItem="I9W-hg-uob" firstAttribute="baseline" secondItem="7St-8O-W9s" secondAttribute="firstBaseline" id="ILP-kg-Htl"/>
+                            <constraint firstItem="zj8-Fz-pYd" firstAttribute="bottom" secondItem="Msm-9Y-Yn0" secondAttribute="bottom" id="IbQ-ES-Ywj"/>
+                            <constraint firstItem="zRw-T8-Nim" firstAttribute="centerX" secondItem="Dxk-fc-SHS" secondAttribute="centerX" id="KLT-dO-Svx"/>
+                            <constraint firstItem="BD5-1j-MfZ" firstAttribute="top" secondItem="iDp-2o-93O" secondAttribute="bottom" constant="8" id="Lpb-jj-tyY"/>
+                            <constraint firstAttribute="centerY" secondItem="iDp-2o-93O" secondAttribute="centerY" id="cef-Yj-0gW"/>
+                            <constraint firstItem="7St-8O-W9s" firstAttribute="trailing" secondItem="zj8-Fz-pYd" secondAttribute="trailing" id="dOV-TE-Ruf"/>
+                            <constraint firstItem="Msm-9Y-Yn0" firstAttribute="leading" secondItem="I9W-hg-uob" secondAttribute="leading" id="eYo-eP-1nt"/>
+                            <constraint firstItem="Dxk-fc-SHS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="eZG-1h-sm6"/>
+                            <constraint firstItem="zRw-T8-Nim" firstAttribute="top" secondItem="Dxk-fc-SHS" secondAttribute="bottom" constant="8" symbolic="YES" id="eiU-6w-7F4"/>
+                            <constraint firstItem="7St-8O-W9s" firstAttribute="leading" secondItem="zj8-Fz-pYd" secondAttribute="leading" id="hXB-3g-ClK"/>
+                            <constraint firstAttribute="centerX" secondItem="iDp-2o-93O" secondAttribute="centerX" id="kai-Ry-H0C"/>
+                            <constraint firstItem="BD5-1j-MfZ" firstAttribute="leading" secondItem="2B7-fO-cuQ" secondAttribute="leading" id="ldJ-tP-UrE"/>
+                            <constraint firstItem="Msm-9Y-Yn0" firstAttribute="trailing" secondItem="I9W-hg-uob" secondAttribute="trailing" id="ox5-z1-7UE"/>
+                            <constraint firstItem="7St-8O-W9s" firstAttribute="top" secondItem="zj8-Fz-pYd" secondAttribute="bottom" constant="8" symbolic="YES" id="rKY-Wy-Ede"/>
+                            <constraint firstItem="zj8-Fz-pYd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="129" id="srC-A2-eyb"/>
+                            <constraint firstAttribute="bottom" secondItem="2B7-fO-cuQ" secondAttribute="bottom" constant="20" symbolic="YES" id="vEI-bY-DWJ"/>
+                            <constraint firstItem="2B7-fO-cuQ" firstAttribute="trailing" secondItem="XLk-VQ-9dX" secondAttribute="trailingMargin" id="xvQ-Fl-nPs"/>
+                            <constraint firstItem="2B7-fO-cuQ" firstAttribute="leading" secondItem="XLk-VQ-9dX" secondAttribute="leadingMargin" id="yeZ-5i-KqM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAction" destination="iDp-2o-93O" id="jET-Mt-YBc"/>
+                        <outlet property="lblBTStatus" destination="2B7-fO-cuQ" id="slL-bk-Ssu"/>
+                        <outlet property="lblStatus" destination="BD5-1j-MfZ" id="YDE-jG-j1M"/>
+                        <outlet property="txtMajor" destination="zj8-Fz-pYd" id="M5V-hT-Z6Q"/>
+                        <outlet property="txtMinor" destination="Msm-9Y-Yn0" id="bqE-pM-01o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
